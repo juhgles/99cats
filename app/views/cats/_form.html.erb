@@ -1,4 +1,4 @@
-<h2>Edit Cat</h2>
+<h2>Unified Form</h2>
 
 <form action="/cats" method= "Patch">
 
@@ -18,14 +18,14 @@
 
 <label for="cat_color">Coat color</label>
  <select name="cat[color]" id="cat_color", >
-   <option value="brown", selected="<%='selected' if @cat.color == "brown"%>">Brown</option>
-   <option value="orange", selected="<%='selected' if @cat.color == "orange"%>">Orange</option>
-   <option value="black", selected="<%='selected' if @cat.color == "black"%>">Black</option>
-   <option value="white", selected="<%='selected' if @cat.color == "white"%>">White</option>
-   <option value="grey", selected="<%='selected' if @cat.color == "grey"%>">Grey</option>
-   <option value="calico", selected="<%='selected' if @cat.color == "calico"%>">Calico</option>
-   <option value="tuxedo", selected="<%='selected' if @cat.color == "tuxedo"%>">Tuxedo</option>
-   <option value="tortoise shell", selected="<%='selected' if @cat.color == "tortoise shell"%>">Tortoise Shell</option>
+   <option value="brown">Brown</option selected="<%='selected' if @cat.color == "brown"%>">
+   <option value="orange">Orange</option selected="<%='selected' if @cat.color == "orange"%>">
+   <option value="black" >Black</option selected="<%='selected' if @cat.color == "black"%>">
+   <option value="white">White</option selected="<%='selected' if @cat.color == "white"%>">
+   <option value="grey">Grey</option selected="<%='selected' if @cat.color == "grey"%>">
+   <option value="calico">Calico</option selected="<%='selected' if @cat.color == "calico"%>">
+   <option value="tuxedo">Tuxedo</option selected="<%='selected' if @cat.color == "tuxedo"%>">
+   <option value="tortoise shell">Tortoise Shell</option selected="<%='selected' if @cat.color == "tortoise shell"%>">
  </select>
  <br>
 

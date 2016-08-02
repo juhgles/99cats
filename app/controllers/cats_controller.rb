@@ -20,6 +20,11 @@ class CatsController < ApplicationController
     redirect_to cats_url
   end
 
+  def update
+    @cat = Cat.find_by(id: params[:id])
+    render :edit
+  end
+
   private
   def cat_params
     params.require(:cat).permit(:birth_date, :sex, :color, :name, :description)

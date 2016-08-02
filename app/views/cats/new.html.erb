@@ -1,18 +1,19 @@
-<h2>Create a New Cat1</h2>
+<h2>Create a New Cat</h2>
 
 <form action="/cats" method= "POST">
 
-<input type="text" name="cat[name]" id="cat_name" value="Name">
 <label for="cat_name">Name</label>
+<input type="text" name="cat[name]" id="cat_name" value="Name">
 
-<input type="radio" name="cat[sex]" id="cat_sex_female" value="F">
 <label for="cat_sex_female">Female</label>
 
-<input type="radio" name="cat[sex]" id="cat_sex_male" value="M">
-<label for="cat_sex_male">Male</label>
+<input type="radio" name="cat[sex]" id="cat_sex_female" value="F">
 
-<label for="cat_birth_date">Birth date</label>
+<label for="cat_sex_male">Male</label>
+<input type="radio" name="cat[sex]" id="cat_sex_male" value="M">
+
 <input name="cat[birth_date]" id="cat_birth_date" type="date">
+<label for="cat_birth_date">Birth date</label>
 
 <label for="cat_color">Coat color</label>
  <select name="cat[color]" id="cat_color">
