@@ -2,35 +2,7 @@
 
 <form action="/cats" method= "POST">
 
-<label for="cat_name">Name</label>
-<input type="text" name="cat[name]" id="cat_name" value="Name">
+<%= render "form", cat: @cat, action: :new %>
 
-<label for="cat_sex_female">Female</label>
-
-<input type="radio" name="cat[sex]" id="cat_sex_female" value="F">
-
-<label for="cat_sex_male">Male</label>
-<input type="radio" name="cat[sex]" id="cat_sex_male" value="M">
-
-<input name="cat[birth_date]" id="cat_birth_date" type="date">
-<label for="cat_birth_date">Birth date</label>
-
-<label for="cat_color">Coat color</label>
- <select name="cat[color]" id="cat_color">
-   <option value="brown">Brown</option>
-   <option value="orange">Orange</option>
-   <option value="black">Black</option>
-   <option value="white">White</option>
-   <option value="grey">Grey</option>
-   <option value="calico">Calico</option>
-   <option value="tuxedo">Tuxedo</option>
-   <option value="tortoise shell">Tortoise Shell</option>
- </select>
- <br>
-
-<label for="cat_description">Description</label>
- <input name="cat[description]" id="cat_description type="text">
 
 <input type= "submit" value = "Add Cat!">
-
-</form>

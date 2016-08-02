@@ -1,4 +1,5 @@
 require 'date'
+
 class CatsController < ApplicationController
 
   def index
@@ -11,6 +12,7 @@ class CatsController < ApplicationController
   end
 
   def new
+    @cat = Cat.new(name: "Meowser", sex: "M", color: "grey", birth_date: "2015-03-12")
     render :new
   end
 

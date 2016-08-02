@@ -1,6 +1,6 @@
-<h2>Unified Form</h2>
+<form>
 
-<form action="/cats" method= "Patch">
+<h2>Unified Form</h2>
 
 <input type="hidden" name="redirect_to" value="<%= request.original_url %>">
 
@@ -32,6 +32,6 @@
 <label for="cat_description">Description</label>
  <input name="cat[description]" id="cat_description type="text", value = ""<%=@cat.description%>">
 
-<input type= "submit" value = "Add Cat!">
+<input type= "submit" value = "Update Cat!">
 
 </form>

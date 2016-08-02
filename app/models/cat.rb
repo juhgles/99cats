@@ -3,6 +3,8 @@ class Cat < ActiveRecord::Base
   validates :sex, inclusion: { in: %w(M F),
     message: "%{value} is not a valid cat sex" }
 
+  has_many :cat_rental_requests
+
     def age
       months = ((Time.now.to_date - birth_date).to_i)/30
       months >= 12 ? "#{(months/12)} years" : "#{months} months"

@@ -2,36 +2,6 @@
 
 <form action="/cats" method= "Patch">
 
-<input type="hidden" name="redirect_to" value="<%= request.original_url %>">
-
-<label for="cat_name">Name</label>
-<input type="text" name="cat[name]" id="cat_name" value="<%=@cat.name%>">
-
-<input type="radio" name="cat[sex]" id="cat_sex_female" value="F", checked="<%='checked' if @cat.sex == "F"%>">
-<label for="cat_sex_female">Female</label>
-
-<input type="radio" name="cat[sex]" id="cat_sex_male" value="M", checked="<%='checked' if @cat.sex == "M" %>">
-<label for="cat_sex_male">Male</label>
-
-<label for="cat_birth_date">Birth date</label>
-<input name="cat[birth_date]" id="cat_birth_date" type="date", value="<%=@cat.birth_date%>">
-
-<label for="cat_color">Coat color</label>
- <select name="cat[color]" id="cat_color", >
-   <option value="brown", selected="<%='selected' if @cat.color == "brown"%>">Brown</option>
-   <option value="orange", selected="<%='selected' if @cat.color == "orange"%>">Orange</option>
-   <option value="black", selected="<%='selected' if @cat.color == "black"%>">Black</option>
-   <option value="white", selected="<%='selected' if @cat.color == "white"%>">White</option>
-   <option value="grey", selected="<%='selected' if @cat.color == "grey"%>">Grey</option>
-   <option value="calico", selected="<%='selected' if @cat.color == "calico"%>">Calico</option>
-   <option value="tuxedo", selected="<%='selected' if @cat.color == "tuxedo"%>">Tuxedo</option>
-   <option value="tortoise shell", selected="<%='selected' if @cat.color == "tortoise shell"%>">Tortoise Shell</option>
- </select>
- <br>
-
-<label for="cat_description">Description</label>
- <input name="cat[description]" id="cat_description type="text", value = ""<%=@cat.description%>">
+<%= render "form", cat: @cat, action: :edit %>
 
 <input type= "submit" value = "Add Cat!">
-
-</form>
