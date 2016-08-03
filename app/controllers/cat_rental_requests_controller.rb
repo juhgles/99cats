@@ -4,11 +4,15 @@ class CatRentalRequestsController < ApplicationController
 
   def index
     @requests = CatRentalRequest.all
-    render json: @requests
+    render :index
   end
 
   def create
     CatRentalRequest.create!(cat_rental_params)
+  end
+
+  def new
+    @cat_rental_request
   end
 
   private

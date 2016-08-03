@@ -1,0 +1,13 @@
+<h1>All Cat Rental Requests</h1>
+
+<ul>
+  <% @rentals.each do |rental| %>
+    <label for="rental_start_date">Start Date</label>
+    <%= rental.start_date %>
+    <label for="rental_end_date">End Date</label>
+    <%= rental.end_date %>
+    <li>  <a href="/cat_rental_requests/<%= rental.id %>">  <%= rental.name %> </a></li>
+  <% end %>
+</ul>
+
+<%= link_to "Request a Cat!", new_cat_rental_requests_url %>
