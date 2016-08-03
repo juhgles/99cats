@@ -10,6 +10,5 @@ class CreateCatRentalRequests < ActiveRecord::Migration
     end
 
     add_index :cat_rental_requests, :cat_id
-
   end
 end

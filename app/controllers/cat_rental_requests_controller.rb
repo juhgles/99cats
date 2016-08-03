@@ -1,17 +1,15 @@
 require 'date'
 
-class CatRentalRequestController < ApplicationController
+class CatRentalRequestsController < ApplicationController
 
   def index
     @requests = CatRentalRequest.all
-    render :index
+    render json: @requests
   end
 
   def create
     CatRentalRequest.create!(cat_rental_params)
   end
-
-
 
   private
   def cat_rental_params

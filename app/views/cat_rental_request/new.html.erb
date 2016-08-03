@@ -1,11 +1,13 @@
 <h1>Request A Cat</h1>
 
 <label for="start_date">Start Date</label>
-<input type="date" name="cat_rental[start_date]" id="cat_rental_start_date" >
+<input type="date" name="cat_rental_request[start_date]" id="cat_rental_request_start_date" >
 
 <label for="end_date">End Date</label>
-<input type="date" name="cat_rental[end_date]" id="cat_rental_end_date" >
+<input type="date" name="cat_rental_request[end_date]" id="cat_rental_request_end_date" >
 
-
-<label for="cat_color">Coat color</label>
-<option value="brown">Brown</option>
+<label for="desired_cat">Select a Cat</label>
+  <select name="cat_rental_request[desired_cat]" id="cat_color", >
+    <% @cats.each do |cat| %>
+    <option value="<%=cat.name%>"></option>
+  </select>
